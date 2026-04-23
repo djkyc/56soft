@@ -1,5 +1,5 @@
-name: windows_flutter
-description: Flutter Windows 桌面应用
+name: windows_tool
+description: Windows 桌面工具
 version: 1.0.0+1
 
 environment:
@@ -8,7 +8,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  window_manager: ^0.4.0          # 窗口管理（大小、标题、置顶）
+  system_tray: ^0.2.0             # 托盘图标
+  path_provider: ^2.1.0           # 文件读写
+  file_picker: ^6.0.0             # 文件选择
 
 flutter:
   uses-material-design: true
-  windows: true  # 只启用 Windows
+  windows: true
