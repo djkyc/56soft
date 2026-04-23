@@ -10,24 +10,21 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: 下载代码
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: 设置 Flutter
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable
-          channel: stable
-          cache: true
+          flutter-version: "3.24.3"
 
-      - name: 安装依赖
+      - name: Install dependencies
         run: flutter pub get
 
-      - name: 构建 Windows EXE
+      - name: Build Windows
         run: flutter build windows
 
-      - name: 上传打包文件
+      - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: Windows-Release
+          name: Windows-App
           path: build/windows/x64/runner/Release/
