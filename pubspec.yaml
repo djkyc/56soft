@@ -1,4 +1,4 @@
-name: 56soft
+name: soft56
 description: Windows 桌面应用
 version: 1.0.0+1
 
@@ -15,5 +15,3 @@ dependencies:
 
 flutter:
   uses-material-design: true
-
-# 这里绝对不能写 windows: true！
